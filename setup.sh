@@ -25,7 +25,7 @@ apt-get install autoconf automake autotools-dev curl python3 libmpc-dev \
 git -C riscv-gnu-toolchain pull || git clone --recursive https://github.com/riscv/riscv-gnu-toolchain  # Note: this is 6GiB!
 git -C riscv-opcodes pull || git clone --recursive https://github.com/riscv/riscv-opcodes
 cd riscv-gnu-toolchain
-./configure --prefix=/usr--with-arch=rv32gc --with-abi=ilp32d 
+./configure --prefix=/usr --with-arch=rv32gc --with-abi=ilp32d 
 make
 cd ../
 cd ../

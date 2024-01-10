@@ -48,14 +48,6 @@ $ vagrant ssh -c "sudo /project/riscof-test-exporter/run_tests.sh"
 
 The raw output you seek is in the `outbox/` directory.
 
-## How do I test more extensions?
-
-Add it:
-
-- Add it to the ISA field under `hart0` in `wiretapped_spike_isa.yaml`.
-- Make sure `riscof_wiretapped_spike.py` references the extension you want in `def build():` (look at the M extension for an example.)
-- Add it to the MISA reset value in `wiretapped_spike_isa.yaml`: you can find the relevant bit in the table mirrored [here](https://github.com/openhwgroup/cva6/issues/1734). You can compute the right value for IMFC, for instance, as 0x4000000 (not sure why this is always there) orred with `1<<8`, `1<<12`, `1<<2``, 1<<5`. It also appears under extensions/type/warl/legal.
-
 ## What does the output look like?
 
 Because I can't imagine most people who find this repo will want to wait six hours for the commands to run, I included an example of the output in `example_output/`.
@@ -99,6 +91,14 @@ If you see the script freeze on any of these lines, it's not dead, I promise:
 - `Cloning into /project/workspace/riscv-gnu-toolchain/binutils`: Sorry, the repo's really big. I didn't make it!
 
 Like I said, the repo is really big! I'm really sorry it takes so long.
+
+## How do I test more extensions?
+
+Add it:
+
+- Add it to the ISA field under `hart0` in `wiretapped_spike_isa.yaml`.
+- Make sure `riscof_wiretapped_spike.py` references the extension you want in `def build():` (look at the M extension for an example.)
+- Add it to the MISA reset value in `wiretapped_spike_isa.yaml`: you can find the relevant bit in the table mirrored [here](https://github.com/openhwgroup/cva6/issues/1734). You can compute the right value for IMFC, for instance, as 0x4000000 (not sure why this is always there) orred with `1<<8`, `1<<12`, `1<<2``, 1<<5`. It also appears under extensions/type/warl/legal.
 
 ## Can I have a crash course on Vagrant?
 

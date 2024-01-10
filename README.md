@@ -10,7 +10,7 @@ The official RISC-V test suite is implemented as a tool called RISCOF.
 
 The problems:
 
-- RISCOF really wants to run on Ubuntu with a fairly old version of Python. (The docs say 3.6, but I couldn't get it working below 3.8 works.)
+- RISCOF really wants to run on Ubuntu with a fairly old version of Python. (The docs say 3.6, but I couldn't get it working below 3.8, which does work.)
 - RISCOF wants to pollute the global directories of your machine.
 - RISCOF is incredibly huge, but not for any especially good reason.
 
@@ -74,7 +74,7 @@ The output of the tool is only about 7MiB on my machine, so you could easily ver
 
 Not really: it only substitutes for the final series of assertions. RISCOF's test generator is something I have absolutely no desire to substitute for.
 
-If you want to generate a lot of RISCV binaries fast, which is the main other thing RISCOF does, it's pretty easy to cross-compile them on Linux or Windows using clang:
+If you want to generate a lot of RISC-V binaries fast, which is the main other thing RISCOF does, it's pretty easy to cross-compile them on Linux or Windows using clang:
 
 ```bash
 clang -nostdlib --target=riscv32 -march=rv32i input.c -o output.elf

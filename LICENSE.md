@@ -1,4 +1,4 @@
-(Preserved from RISCOF)
+(Preserved from RISCOF. My contributions are GPL.)
 
 BSD 3-Clause License
 

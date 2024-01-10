@@ -1,0 +1,3 @@
+outbox/
+.vagrant/
+__pycache__/

@@ -1,0 +1,4 @@
+riscv-config==3.16.0
+riscv-isac==0.18.0
+riscof==1.25.3
+MarkupSafe==2.0.0  # transitive dep, broken on 3.8

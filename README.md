@@ -54,7 +54,7 @@ Add it:
 
 - Add it to the ISA field under `hart0` in `wiretapped_spike_isa.yaml`.
 - Make sure `riscof_wiretapped_spike.py` references the extension you want in `def build():` (look at the M extension for an example.)
-- Add it to the MISA reset value in `wiretapped_spike_isa.yaml`: you can find the relevant bit in the table mirrored [here](https://github.com/openhwgroup/cva6/issues/1734). You can compute the right value for IMFC, for instance, as 0x4000000 (not sure why this is always there) orred with `1<<8`, `1<<12`, `1<<2``, 1<<5`. It also appears under extensions/type/warl/legal
+- Add it to the MISA reset value in `wiretapped_spike_isa.yaml`: you can find the relevant bit in the table mirrored [here](https://github.com/openhwgroup/cva6/issues/1734). You can compute the right value for IMFC, for instance, as 0x4000000 (not sure why this is always there) orred with `1<<8`, `1<<12`, `1<<2``, 1<<5`. It also appears under extensions/type/warl/legal.
 
 ## What does the output look like?
 

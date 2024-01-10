@@ -63,6 +63,8 @@ class wiretapped_spike(pluginTemplate):
             self.isa += 'i'
             if "M" in ispec["ISA"]:
                 self.isa += 'm'
+            if "F" in ispec["ISA"]:
+                self.isa += 'f'
             if "C" in ispec["ISA"]:
                 self.isa += 'c'
         compiler = "riscv{0}-unknown-elf-gcc".format(self.xlen)
